@@ -63,7 +63,7 @@ export default function TechVisionHomepage() {
   "https://techvisionskills.onrender.com/api/students/enroll",
   studentForm
 );
-    );
+
 
     setEnrollStatus("success");
 
