@@ -60,8 +60,9 @@ export default function TechVisionHomepage() {
 
   try {
     await axios.post(
-      "https://techvisionskills.onrender.com/api/students/enroll",
-      studentForm
+  "https://techvisionskills.onrender.com/api/students/enroll",
+  studentForm
+);
     );
 
     setEnrollStatus("success");
