@@ -5,6 +5,9 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 
 const studentRoutes = require("./routes/studentRoutes");
+
+const app = express();
+
 const corsOptions = {
   origin: [
     "http://localhost:5173",
@@ -17,19 +20,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.options("*", cors(corsOptions));
-const app = express();
-
-app.use(
-  cors({
-    origin: [
-      "http://localhost:5173",
-      "https://techvisionskills1.netlify.app"
-    ],
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
-  })
-);
 
 app.use(express.json());
 
